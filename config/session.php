@@ -2,15 +2,11 @@
 
 session_start();
 
-function __construct(){
+if(!isset($_SESSION['token'])):
 
-	if(!isset($_SESSION['token'])):
+	$_SESSION['token'] = md5(uniqid(mt_rand(), true));
 
-		$_SESSION['token'] = md5(uniqid(mt_rand(), true));
-
-	endif;
-
-}
+endif;
 
 function csrf_token(){
 	return $_SESSION['token'];
