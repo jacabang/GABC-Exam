@@ -3,13 +3,13 @@
 	$dsn = 'mysql:host=localhost;dbname=gabc';
 
 	$username = "root";
-	$password = "";
+	$password = "123";
 
 	try {
 		$db = new PDO($dsn, $username, $password);
 		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	} catch (PDOException $e){
-		$rerror = "Database Error: ";
+		$error = "Database Error: ";
 		$error .= $e->getMessage();
 		include('view/error.php');
 		exit();
