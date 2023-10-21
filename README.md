@@ -38,13 +38,15 @@ Note: Note: In my case, I use [ XAMPP ](https://www.apachefriends.org/ "xampp"),
 ```
 sql/gabc.sql
 ```
-Note: I currently use my local on creating this project and named my database ``` gabc ```, If you wish to change the database name, you may want to look into
+- Note: I currently use my local on creating this project and named my database ``` gabc ```, If you wish to change the database name, you may want to look into
 
 ```
 config/database.php
 ```
 
-To change the default database settings, such as MySQL Server Host, Username, Password, and Database Name
+- To change the default database settings, such as MySQL Server Host, Username, Password, and Database Name
+
+- Make sure that the folder ```uploads``` has a write permission.
 
 
 ## 📁Folder Structure Diagrams
