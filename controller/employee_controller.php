@@ -78,13 +78,19 @@ class EmployeeController {
 	}
 
 	public static function fetchEmployee(){
-		 $query = GABC::fetchEmployee();
+		$query = GABC::fetchEmployee();
 
-		 $data = [];
+		$data = [];
+
+		$image_path = './assets/images/No-Image-Available.png';
 
 		foreach($query as $result):
 
-			$action1 ="<a style='margin-bottom: .5em; margin-left: .5em;' data-id='".$result['id']."' data-first_name='".$result['first_name']."' data-middle_name='".$result['middle_name']."' data-last_name='".$result['last_name']."' data-hired_at='".$result['hired_at']."' data-image_path='".$result['image_path']."' class='btn btn-info btn-flat btn-pri icon-update'>
+			if(file_exists($result['image_path'])):
+				$image_path = $result['image_path'];
+			endif;
+
+			$action1 ="<a style='margin-bottom: .5em; margin-left: .5em;' data-id='".$result['id']."' data-first_name='".$result['first_name']."' data-middle_name='".$result['middle_name']."' data-last_name='".$result['last_name']."' data-hired_at='".$result['hired_at']."' data-image_path='".$image_path."' class='btn btn-info btn-flat btn-pri icon-update'>
                         <i class='fa fa-pencil-square-o'></i> Edit
                     </a>";
 
