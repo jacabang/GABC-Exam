@@ -51,7 +51,7 @@ class GABC {
 			'permit_no' => $data['permit_no'],
 			'open_at' => $data['date_open'] == "" ? NULL : $data['date_open'],
 			'is_active' => $is_active,
-			'branch_manager_id' => $branch_manager_id,
+			'branch_manager_id' => $branch_manager_id == "" ? NULL : $branch_manager_id,
 			]);
 	}
 
@@ -77,7 +77,7 @@ class GABC {
 			'permit_no' => $data['permit_no'],
 			'open_at' => $data['date_open'] == "" ? NULL : $data['date_open'],
 			'is_active' => $is_active,
-			'branch_manager_id' => $branch_manager_id,
+			'branch_manager_id' => $branch_manager_id == "" ? NULL : $branch_manager_id,
 			], $branch_id);
 	}
 

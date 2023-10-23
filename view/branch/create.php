@@ -81,7 +81,7 @@
 						<select id="branch_manager" class="form-select mySelect2" name="branch_manager_id">
 							<option value="">Search an Employee</option>
 							<?php if($employee != ""): ?>
-								<option value="<?= $employee['id']; ?>"><?= $employee['last_name']; ?>, <?= $employee['first_name']; ?> <?= $employee['middle_name']; ?></option>
+								<option value="<?= $employee['id']; ?>" selected><?= $employee['last_name']; ?>, <?= $employee['first_name']; ?> <?= $employee['middle_name']; ?></option>
 							<?php endif; ?>
 						</select>
 	                </div>
